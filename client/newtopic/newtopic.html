@@ -1,15 +1,18 @@
 <template name="newtopic">
   <div class="container">
-    <div class="row">
-      {{#if currentUser}}
-        <fieldset>
-        <p>Post Body</p>
-        <textarea id="body-submit"></textarea>
-        <input id="submit-node" type="button" value="submit"/>
-        </fieldset>
-      {{else}}
-        Log in first!
-      {{/if}}
-    </div>
-  </div>
+    <div class="jumbotron">
+        {{#if currentUser}}
+      <fieldset>
+      <!-- <textarea id="body-submit"></textarea> -->
+    <textarea class="form-control" rows="3" id="body-submit"></textarea>
+      <span class="help-block">Everyone at wespr.club is a <i class="fa fa-star"></i>
+.</span>
+
+      <input id="submit-node" type="button" class="btn btn-default" value="submit"/>
+      </fieldset>
+    {{else}}
+      Log in first!
+    {{/if}}
+  </div> 
+</div>
 </template>
