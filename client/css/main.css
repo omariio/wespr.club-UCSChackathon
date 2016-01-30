@@ -199,12 +199,11 @@ select:hover {
 #nodeviewer {
 	position:absolute;
 	right:2%;
-	top:30%;
+	top:12%;
 	left:70%;
-	bottom:55%;
-
+	bottom:74%;
 	border-color:white;
-	/*border:1px solid;*/
+	border:1px solid;
 	overflow-y:auto;
 	z-index:1;
 }
@@ -228,7 +227,7 @@ select:hover {
 	bottom:25%;
 	background-color: white;
 	border-color:white;
-	border:1px solid;
+	/*border:1px solid;*/
 	z-index:1;
 	opacity:.9;
 	overflow-y:auto;

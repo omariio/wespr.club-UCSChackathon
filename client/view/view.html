@@ -1,4 +1,5 @@
 <template name="view">
+<div class="animated fadeIn">
   <a id="forumview-link" class="btn btn-default">Standard</a>
   <a id="graphview-link" class="btn btn-default">Graph</a>
   {{#if isStandard}}
@@ -6,4 +7,5 @@
   {{else}}
     {{> graphview}}
   {{/if}}
+</div>
 </template>
