@@ -9,7 +9,6 @@ Meteor.startup(function(){
 
 Template.header.helpers({
   user: function(){
-    console.log("hit");
     return Meteor.user();
   }
 });
