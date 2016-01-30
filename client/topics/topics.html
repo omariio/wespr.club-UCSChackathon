@@ -1,0 +1,49 @@
+<template name="topics">
+	<!-- <nav class="create-topic-navigation center">
+		<div class="">
+	 		<a href="new"> Create New Topic </a>
+	 	</div>
+
+		<div class="">
+			<a href="newpie"> Create New Pie Chart </a>
+		</div>
+
+		<div class="">
+			<a href="chat"> Chat </a>
+		</div>
+		<h2 class=""> Proposals: </h2>
+	</nav> -->
+<div class="container">
+	<!-- <div class="row"> -->
+    {{#each topicList}}
+		<div class="span3">
+		<div class="panel panel-primary">
+		  <div class="panel-heading">
+		    <p class="panel-title">Posted {{getTimeString timestamp}}, Last Updated {{lastPost root_id}}
+				by <a href="/user/{{username}}">{{username}}</a></p>
+		  </div>
+		  <div class="panel-body">
+		    <a href="view/{{_id}}" class="graphlink"> <h3 class="pull-left panel-title">{{formatBody body}} </h3></a>
+				<p class="text-right">
+					Vigor <span style="color:{{colorValue value}}" class="badge">({{value}})</span>
+				</p>
+		  </div>
+		</div>
+	</div>
+				<!-- <div class="individual-topic">
+					<div class="row-fluid">
+					<div class="span6"> -->
+					<!-- <a href="view/{{_id}}" class="graphlink"> <h5 class="text-left">{{formatBody body}} </h5></a>
+					<div class="text-right"> by <a href="/user/{{username}}">{{username}}</a> </div> -->
+					<!-- </div>
+	        <div class="span6"> -->
+						<!-- <p class="text-right">
+							Value <span style="color:{{colorValue value}}">({{value}})</span>
+						</p>
+						<p class="text-right">
+							Posted {{getTimeString timestamp}}, Last Updated {{lastPost root_id}}
+						</p> -->
+			{{/each}}
+	<!-- </div> -->
+</div>
+</template>

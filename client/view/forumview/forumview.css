@@ -1,0 +1,56 @@
+
+.post-infobox{
+  font-size:14px;
+}
+
+.post-user{
+  float:left;
+}
+
+.post-info{
+  font-size:12px;
+  margin-top: 2px;
+  margin-left: 4px;
+}
+
+.post-body{
+  font-size:16px;
+  white-space: pre-wrap;
+}
+
+.post-utilities{
+  color:gray;
+  font-size:13px;
+}
+
+.post-replybutton{
+  cursor: pointer;
+  cursor: hand;
+}
+
+.post-closebutton{
+  cursor: pointer;
+  cursor: hand;
+}
+
+.post-type-selector-wrapper{
+  width:150px;
+}
+
+.post-green{
+  background-color:#EAFFEA;
+}
+
+.post-red{
+  background-color:#FFD5D5;
+}
+
+.post-gray{
+  background-color:#E6E6E6;
+}
+
+.forumview-selected{
+  border:3px;
+  border-color:yellow;
+  border-style: solid;
+}

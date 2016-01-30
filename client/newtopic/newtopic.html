@@ -1,0 +1,15 @@
+<template name="newtopic">
+  <div class="container">
+    <div class="row">
+      {{#if currentUser}}
+        <fieldset>
+        <p>Post Body</p>
+        <textarea id="body-submit"></textarea>
+        <input id="submit-node" type="button" value="submit"/>
+        </fieldset>
+      {{else}}
+        Log in first!
+      {{/if}}
+    </div>
+  </div>
+</template>

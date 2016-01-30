@@ -1,0 +1,9 @@
+<template name="view">
+  <a id="forumview-link" class="btn btn-default">Standard</a>
+  <a id="graphview-link" class="btn btn-default">Graph</a>
+  {{#if isStandard}}
+    {{> forumview}}
+  {{else}}
+    {{> graphview}}
+  {{/if}}
+</template>

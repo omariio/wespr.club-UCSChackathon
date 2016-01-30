@@ -1,0 +1,26 @@
+
+#chat-box {
+  position:fixed;
+  padding-top: 10px;
+  top:50px;
+  width:80%;
+}
+
+#chat-log {
+  overflow-y:scroll;
+  padding-top: 40px;}
+
+#chat-send-button {
+  position:fixed;
+  top:44px;
+  right:10px;
+}
+
+.chat-username-column {
+  left:20%;
+}
+
+.chat-body-column {
+  right:80%;
+}
+

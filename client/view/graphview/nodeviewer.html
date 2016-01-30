@@ -1,0 +1,23 @@
+
+<template name="nodeviewer">
+	<div id="nodeviewer">
+		<div class="viewer-padding">
+			<div>
+				{{#if registeredCommenter}}
+					Username: <a href="/user/{{registeredCommenter.username}}"> <em class="text-username">{{selected.username}} </em> </a>
+				{{else}}
+					Username: {{selected.username}}
+				{{/if}}
+			</div>
+			<div>
+				Value: <span style="color:{{colorValue selected.value}}">({{selected.value}})</span>
+			</div>
+			<div>
+				Body: {{selected.body}}
+			</div>
+			<div>
+				<input id="delete-node" type="button" value="delete"/>
+			</div>
+		</div>
+	</div>
+</template>
