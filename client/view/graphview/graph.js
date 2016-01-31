@@ -59,6 +59,10 @@ Template.graph.rendered = function(){
       .data(nodes, function(d){ return d._id});
 
     // 'node' + d._id is because the id field isn't allowed to begin with numbers.
+    var div = d3.select("body").append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0);
+
     if(isFresh){
       DOMnodes.enter()
         .append("circle")
@@ -66,6 +70,7 @@ Template.graph.rendered = function(){
         .attr("r", function(d) { return (Math.abs(d.value) + 5) * 1.5; }) // handles negative values
         .attr("_id", function(d) { return "node" + d._id; })
         .on("mouseover", mouseover)
+        //
         .call(force.drag());
 
         selectHighlighted();
@@ -79,6 +84,19 @@ Template.graph.rendered = function(){
         .on("mouseover", mouseover)
         .call(force.drag());
     }
+
+    $('svg circle').tipsy({
+      gravity: 'w',
+      html: true,
+      // live: true,
+      title: function() {
+        var d = this.__data__;
+        return '<span style="color:#fff"; font-size: 16pt;">'+d.username+': </span>' + '<span style="color:#fff; font-size: 12pt;">'+d.body+'</span>' +
+        '<span style="color:#fff; class="badge" font-size: 12pt;">'+d.value+'</span>';
+      }
+
+
+    });
 
     // FIXME- This won't work as expected, get it to run like data selection.
     DOMnodes.exit()
@@ -210,6 +228,7 @@ Template.graph.rendered = function(){
   }
 
   function mouseover(d) {
+    console.log(d);
     if (d3.event.defaultPrevented)
       return;
 
@@ -217,7 +236,6 @@ Template.graph.rendered = function(){
     if(mousedOver){
       var c = self.graphElem.select("circle[_id=node" + mousedOver._id + "]")
       var p = self.graphElem.select("path[_id=edge"+ mousedOver._id + "]")
-
 
       if(c[0][0])
         c.classed('highlighted', false);

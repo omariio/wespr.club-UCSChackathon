@@ -2,7 +2,9 @@
 
 Template.nodeviewer.selected = function () {
   var selected_id = Session.get("selected");
-  return Nodes.findOne({_id: selected_id}) || Links.findOne({_id: selected_id});
+  var thisNode = Session.get('mousedOver');
+
+  return thisNode;
 }
 
 Template.nodeviewer.registeredCommenter = function () {

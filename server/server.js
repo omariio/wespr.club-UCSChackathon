@@ -1,4 +1,18 @@
 Meteor.startup(function () {
+  // // on the server
+  // Meteor.publish('nodes', function() {
+  //   return Exercises.find();
+  // });
+  //
+  // Meteor.publish('edges', function() {
+  //   return Posts.find();
+  // });
+  //
+  // Meteor.publish('allUserData', function() {
+  //   return Comments.find();
+  // });
+
+
 
 });
 
